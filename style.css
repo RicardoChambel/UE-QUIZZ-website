@@ -1,0 +1,236 @@
+:root{
+    --fonteTitulos: "Special Gothic Expanded One", sans-serif;
+    --fonteExtra: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+*{
+    transition: .2s;
+}
+@keyframes intro {
+    from{
+        opacity: 0;
+    }
+    
+}
+body {
+    animation: intro 1s;
+    user-select: none;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f1013;
+    color: white;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1f1f 50%, #0f1013 50%);
+    text-align: center;
+  }
+  .hero img{
+    width: 55vh;
+    min-width: 300px;
+    opacity: 0.1;
+    position: absolute;
+    top: 10%;
+  }
+  .hero h1 {
+    font-size: 5rem;
+    color: #3ABEFF;
+    margin: 0;
+    font-family:var(--fonteTitulos)
+  }
+  .hero p {
+    font-size: 1.5rem;
+    letter-spacing:10px;
+    font-family:var(--fonteExtra)
+  }
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    width: 100%;
+  }
+  .footer span{
+    font-size: 1.3rem;
+    letter-spacing: .5rem;
+    font-family:var(--fonteExtra)
+  }
+  .section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family:var(--fonteTitulos)
+  }
+  .info-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    min-height: 300px;
+    text-align: center;
+    align-content: center;
+  }
+  .card i{
+    font-size: 40px;
+  }
+  .card h3{
+    font-size: 25px;
+  }
+  .card p{
+    font-size: 15px;
+  }
+
+  .quiz-section {
+    padding: 60px 20px;
+    background-color: #121212;
+    text-align: center;
+  }
+  .quiz-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family:var(--fonteTitulos);
+    text-transform:uppercase;
+}
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  .option {
+    transition: .2s;
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 150px;
+    min-height: 200px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .option:not(.selected):hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .option:hover {
+    transform: scale(1.05);
+  }
+  .selected{
+    border: 1px solid cyan;
+  }
+  .locked{
+    opacity: .8;
+  }
+  .locked::after{
+    content: "Locked In";
+    position: absolute;
+    margin-top: -370px;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.2);
+    color: cyan;
+    font-family: var(--fonteExtra);
+    font-size: 60px;
+  }
+  .option img {
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .option p{
+    font-size: 25px;
+    font-family: var(--fonteExtra);
+    letter-spacing: 2px;
+  }
+  .lock-button {
+    transition: .5s;
+    padding: 10px 30px;
+    font-family: var(--fonteExtra);
+    background-color: #1f1f1f;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .lock-button:hover{
+    background: #3ABEFF;
+    border: 2px solid black;
+  }
+
+  .submit-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    box-shadow: 10px 0px 10px 10px #121212 inset;
+    background: linear-gradient(135deg, #1f1f1f 50%, #0f1013 50%);
+    text-align: center;
+  }
+  .submit-section h2{
+    font-size: 50px;
+  }
+  .submit-button {
+    padding: 10px 30px;
+    background-color: #3ABEFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .results-section{
+    height: 40vh;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  .results-section h2{
+    font-size: 40px;
+    background: #121212;
+    height: 100%;
+    box-shadow: 0px 0px 10px 0px #3ABEFF inset;
+    animation: results 2s infinite;
+    align-content: center;
+  }
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0f1013;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #99d8f8;
+  }
